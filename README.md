@@ -1,10 +1,8 @@
 # Azure Data Platform - Real Time Analytics
 
-This tutorial will give you a hands on introduction to Microsoft Azure in the perspective of a Modern Data Analytics Platform by walking you through a use case for Real Time Analytics. The tutorial is adopted from a 2 day workshop provided by Microsoft on their [Modern Data Analytics Platform](https://github.com/fabragaMS/ADPE2E).
+This tutorial will give you a hands on introduction to Microsoft Azure from the perspective of a Modern Data Analytics Platform by walking you through a use case for Real Time Analytics. The tutorial is adopted from a 2 day workshop provided by Microsoft on their [Modern Data Analytics Platform](https://github.com/fabragaMS/ADPE2E).
 
 **IMPORTANT**:
-
-* The reference architecture proposed in this workshop aims to explain just enough of the role of each of the Azure Data Services included in the overall modern data platform architecture. This workshop does not replace the need of in-depth training on each Azure service covered.
 
 * The services covered in this course are only a subset of a much larger family of Azure services. Similar outcomes can be achieved by leveraging other services and/or features not covered by this workshop. Specific business requirements may also ask for the use of different services or features not included in this workshop.
 
@@ -38,17 +36,11 @@ The implementation from this tutorial forms a part of the larger modern data ana
 
 ![](./Media/LabArchitecture.jpg)
 
-### [Deploy Azure Data Platform End2End to your subscription](./Deploy/Deploy.md)
+* The reference architecture proposed in this workshop aims to explain just enough of the role of each of the Azure Data Services included in the overall modern data platform architecture. This workshop does not replace the need of in-depth training on each Azure service covered.
 
-**IMPORTANT**: You should skip this Lab if you are executing the labs through subscriptions provided by CloudLabs. All Azure services will be deployed as you activate your registration.
+### [Prerequisites](./Deploy/Deploy.md)
 
-In this section you will automatically provision all Azure resources required to complete labs 1 though to 5. We will use a pre-defined ARM template with the definition of all Azure services used to ingest, store, process and visualise data. 
-
-The estimated time to complete this lab is: **30 minutes**.
-
-**IMPORTANT**|
--------------|
-**In order to avoid potential delays caused by issues found during the ARM template deployment it is recommended you execute Lab 0 prior to Day 1.**|
+In this section you will automatically provision all Azure resources required to complete the tutorial. We will use a mix of pre-defined ARM templates as well as manual deployment to provision the services required.
 
 ### [Ingest and Analyse real-time data with Event Hubs and Stream Analytics](./Lab/Week5/Week5.md)
 In this lab you will use an Azure Logic App to simmulate a NYSE stream of stock purchase transactions. The logic app will then send the messages to Event Hubs. You will then use Stream Analytics to receive and process the stream and perform aggregations to calculate the number of transactions and amound traded in the last 10 seconds. Stream Analytics will send the results to a real-time dataset in Power BI.
