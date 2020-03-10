@@ -56,9 +56,7 @@ In this section you will use the Azure Portal to create a Resource Group that wi
 
 5.	On the **Create a resource group** blade, select your subscription in **Subscription** drop down list.
 
-6.	In the Resource group text box enter “ADPE2E-Lab”
-
-    **IMPORTANT**: If you are deploying this workshop to multiple students using the same subscription then add the student alias to the resources group name so they can identify their own set of resources and avoid confusion during the labs. Example: "ADPE2E-Lab-*Student01*"
+6.	In the Resource group text box enter “BUS5WB-Lab”
 
     **IMPORTANT**: The name of the resource group chosen is ***not*** relevant to the successful completion of the labs. If you choose to use a different name, then please proceed with the rest of the lab using your unique name for the resource group.
 
@@ -70,11 +68,6 @@ In this section you will use the Azure Portal to create a Resource Group that wi
 
     Recommended Regions|
     -------------------|
-    East US|
-    South Central US|
-    West US|
-    Japan East|
-    West Europe|
     Australia East|
 
 9.	Proceed to create the resource group by clicking **Review + Create**, and then **Create**.
@@ -109,14 +102,10 @@ In this section you will use automated deployment and ARM templates to automate 
 
 ## Workshop cost management
 
-The approximate cost to run the resources provisioned for the estimated duration of this workshop (2 days) is around USD 100.00. Remember that you will start get charged from the moment the resource template deployment completes successfully. You can minimise costs during the execution of the labs by taking the following actions below:
+Remember that you will start get charged from the moment the resource template deployment completes successfully. You can minimise costs during the execution of the labs by taking the following actions below:
 
 Azure Resource | Type | Action |
 ---------------|------|--------|
-SynapseDW      | Azure Azure Synapse Analytics | Pause it after completing Lab 3|
-ADPDatabricks | Databricks Workspace | Stop cluster after completing Lab 4
-adpcosmosdb-*suffix*   | Cosmos DB | Delete ImageMetadata container after completing Lab 4
-ADPDesktop | Virtual Machine | Stop it after completing Lab 4
 ADPLogicApp | Logic App | Disable it after completing Lab 5
 SynapseStreamAnalytics-*suffix* | Stream Analytics job | Pause job after completing Lab 5
 

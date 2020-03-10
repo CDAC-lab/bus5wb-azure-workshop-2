@@ -40,6 +40,8 @@ The implementation from this tutorial forms a part of the larger modern data ana
 
 In this section you will provision all Azure resources required to complete the tutorial. We will use a mix of pre-defined ARM templates as well as manual deployment to provision the services required.
 
+**IMPORTANT**: Please make sure to delete the Resource Group at the end of the Tutorial in order to avoid using up your Azure credits. We will be needing these credits for your assignment later on in the semester.
+
 ### [Ingest and Analyse real-time data with Event Hubs and Stream Analytics](./Lab/Lab5/Lab5.md)
 In this lab you will use an Azure Logic App to simmulate a NYSE stream of stock purchase transactions. The logic app will then send the messages to Event Hubs. You will then use Stream Analytics to receive and process the stream and perform aggregations to calculate the number of transactions and amound traded in the last 10 seconds. Stream Analytics will send the results to a real-time dataset in Power BI.
 
