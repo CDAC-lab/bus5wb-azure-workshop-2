@@ -77,65 +77,7 @@ The estimated time to complete this lab is: **30 minutes**.
 -------------|
 **In order to avoid potential delays caused by issues found during the ARM template deployment it is recommended you execute Lab 0 prior to Day 1.**|
 
-### [Lab 1: Load Data into Azure Synapse Analytics using Azure Data Factory Pipelines](./Lab/Lab1/Lab1.md)
-
-In this lab you will configure the Azure environment to allow relational data to be transferred from a Azure SQL Database to an Azure Synapse Analytics database using Azure Data Factory. The dataset you will use contains data about motor vehicle collisions that happened in New York City from 2012 to 2019. You will use Power BI to visualise collision data loaded from Azure Synapse Analytics.
-
-The estimated time to complete this lab is: **45 minutes**.
-
-Step     | Description
--------- | -----
-![1](./Media/Black1.png) | Build an Azure Data Factory Pipeline to copy data from an Azure SQL Database table
-![2](./Media/Black2.png) | Use Azure Data Lake Storage Gen2 as a staging area for Polybase
-![3](./Media/Black3.png) | Load data to an Azure Synapse Analytics table using Polybase
-![4](./Media/Black4.png) | Visualize data from Azure Synapse Analytics using Power BI
-
-![](./Lab/Lab1/Media/Lab1-Image51.png)
-
-### [Lab 2: Transform Big Data using Azure Data Factory Mapping Data Flows](./Lab/Lab2/Lab2.md)
-In this lab you will use Azure Data Factory to download large data files into your data lake and use an Azure Synapse Analytics stored procedure to generate a summary dataset and store it in the final table. The dataset you will use contains detailed New York City Yellow Taxi rides for the first half of 2019. You will generate a daily aggregated summary of all rides using Mapping Data Flows and save the resulting dataset into your Azure Synapse Analytics data warehouse. You will then use Power BI to visualise summarised data. 
-
-The estimated time to complete this lab is: **60 minutes**.
-
- 
-Step     | Description
--------- | -----
-![](./Media/Green1.png) | Build an Azure Data Factory Pipeline to copy big data files from shared Azure Storage
-![](./Media/Green2.png) | Ingest data files into your data lake
-![](./Media/Green3.png) | Use Mapping Data Flows to generate a aggregated daily summary and save the resulting dataset into your Azure Synapse Analytics data warehouse.
-![](./Media/Green4.png) | Visualize data from your Azure Synapse Analytics using Power BI
-
-![](./Lab/Lab2/Media/Lab2-Image40.png)
-
-### [Lab 3: Explore Big Data using Azure Databricks](./Lab/Lab3/Lab3.md)
-In this lab you will use Azure Databricks to explore the New York Taxi data files you saved in your data lake in Lab 2. Using a Databricks notebook you will connect to the data lake and query taxi ride details. 
-
-The estimated time to complete this lab is: **45 minutes**.
-
-Step     | Description
--------- | -----
-![](./Media/Red1.png) |Build an Azure Databricks notebook to explore the data files you saved in your data lake in the previous exercise. You will use Python and SQL commands to open a connection to your data lake and query data from data files.
-![](./Media/Red2.png) |Integrate datasets from Azure Synapse Analytics data warehouse to your big data processing pipeline. Databricks becomes the bridge between your relational and non-relational data stores.
-
-![](./Lab/Lab3/Media/Lab3-Image14.png)
-
-### [Lab 4: Add AI to your Big Data Pipeline with Cognitive Services](./Lab/Lab4/Lab4.md)
-In this lab you will use Azure Data Factory to download New York City images to your data lake. Then, as part of the same pipeline, you are going to use an Azure Databricks notebook to invoke Computer Vision Cognitive Service to generate metadata documents and save them in back in your data lake. The Azure Data Factory pipeline then finishes by saving all metadata information in a Cosmos DB collection. You will use Power BI to visualise NYC images and their AI-generated metadata.
-
-The estimated time to complete this lab is: **75 minutes**.
-
-Step     | Description
--------- | -----
-![](./Media/Blue1.png) | Build an Azure Data Factory Pipeline to copy image files from shared Azure Storage
-![](./Media/Blue2.png) | Save image files to your data lake
-![](./Media/Blue3.png) | For each image in your data lake, invoke an Azure Databricks notebook that will take the image URL as parameter
-![](./Media/Blue4.png) | For each image call the Azure Computer Vision Cognitive service to generate image metadata. Metadata files are saved back in your data lake
-![](./Media/Blue5.png) | Copy metadata JSON documents into your Cosmos DB database
-![](./Media/Blue6.png) | Visualize images and associated metadata using Power BI
-
-![](./Lab/Lab4/Media/Lab4-Image70.png)
-
-### [Lab 5: Ingest and Analyse real-time data with Event Hubs and Stream Analytics](./Lab/Lab5/Lab5.md)
+### [Lab 5: Ingest and Analyse real-time data with Event Hubs and Stream Analytics](./Lab/Week5/Week5.md)
 In this lab you will use an Azure Logic App to simmulate a NYSE stream of stock purchase transactions. The logic app will then send the messages to Event Hubs. You will then use Stream Analytics to receive and process the stream and perform aggregations to calculate the number of transactions and amound traded in the last 10 seconds. Stream Analytics will send the results to a real-time dataset in Power BI.
 
 The estimated time to complete this lab is: **45 minutes**.
@@ -148,7 +90,7 @@ Step     | Description
 ![](./Media/Orange4.png) | Incorporate Stock Company reference data into your stream processing logic
 ![](./Media/Orange5.png) | Visualize real-time data generated by Stream Analytics with Power BI
 
-![](./Lab/Lab5/Media/Lab5-Image66.png)
+![](./Lab/Week5/Media/Image66.png)
 
 ## Workshop Proposed Agenda
 
