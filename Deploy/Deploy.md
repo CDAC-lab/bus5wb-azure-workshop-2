@@ -56,7 +56,7 @@ In this section you will use the Azure Portal to create a Resource Group that wi
 
 5.	On the **Create a resource group** blade, select your subscription in **Subscription** drop down list.
 
-6.	In the Resource group text box enter “BUS5WB-Lab”
+6.	In the Resource group text box enter “ADPE2E-Synapse”
 
     **IMPORTANT**: The name of the resource group chosen is ***not*** relevant to the successful completion of the labs. If you choose to use a different name, then please proceed with the rest of the lab using your unique name for the resource group.
 
@@ -78,8 +78,8 @@ In this section you will use automated deployment and ARM templates to automate 
 
 1. You can deploy all Azure services required in each lab by clicking the **Deploy to Azure** button below. 
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FfabragaMS%2FADPE2E%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank">
-    <img src="https://github.com/fabragaMS/ADPE2E/raw/master/Deploy/Media/deploytoazure.png"/>    
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCDAC-lab%2FBUS5WB-Azure-Workshop-2%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank">
+    <img src="https://github.com/CDAC-lab/BUS5WB-Azure-Workshop-2/blob/master/Deploy/Media/deploytoazure.png"/>    
 </a>
 
 2. You will be directed to the Azure portal to deploy the ADPE2E ARM template from this repository. On the **Custom deployment** blade, enter the following details:
