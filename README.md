@@ -8,8 +8,6 @@ This tutorial will give you a hands on introduction to Microsoft Azure from the 
 
 * Some concepts presented in this course can be quite complex and you may need to seek for more information from different sources to compliment your understanding of the Azure services covered.
 
-![](./Media/ModernDataPlatformReferenceArchitecture.jpg)
-
 ## Document Structure
 This document contains detailed step-by-step instructions on how to implement Real Time Analytics in a Modern Data Platform architecture using Azure Data Services. It’s recommended you carefully read the detailed description contained in this document for a successful experience with all Azure services. 
 
@@ -27,8 +25,16 @@ The following prerequisites must be completed before you start these labs:
     <br>**IMPORTANT**: When you deploy the lab resources in your own subscription you are responsible for the charges related to the use of the services provisioned. For more information about the list of services and tips on how to save money when executing these labs, please visit the Cost Management section of the [Platform Provisioning](./Deploy/Deploy.md) page.
 
 * This tutorial requires you to have a Power BI Pro account. If you don’t have an account you can sign up for a 60-day trial for free here: https://powerbi.microsoft.com/en-us/power-bi-pro/
+
+### [Platform Provisioning](./Deploy/Deploy.md)
+
+In this section you will provision all Azure resources required to complete the tutorial. We will use a mix of pre-defined ARM templates as well as manual deployment to provision the services required.
+
+**IMPORTANT**: Please make sure to delete the Resource Group at the end of the Tutorial in order to avoid using up your Azure credits. We will be needing these credits for your assignment later on in the semester.
   
-## Lab Guide
+## Overall View of the a Modern Data Platform Reference Architecture
+
+![](./Media/ModernDataPlatformReferenceArchitecture.jpg)
 
 The implementation from this tutorial forms a part of the larger modern data analytics platform architecture referenced below:
 
@@ -36,11 +42,7 @@ The implementation from this tutorial forms a part of the larger modern data ana
 
 * The reference architecture proposed in this workshop aims to explain just enough of the role of each of the Azure Data Services included in the overall modern data platform architecture. This workshop does not replace the need of in-depth training on each Azure service covered.
 
-### [Platform Provisioning](./Deploy/Deploy.md)
-
-In this section you will provision all Azure resources required to complete the tutorial. We will use a mix of pre-defined ARM templates as well as manual deployment to provision the services required.
-
-**IMPORTANT**: Please make sure to delete the Resource Group at the end of the Tutorial in order to avoid using up your Azure credits. We will be needing these credits for your assignment later on in the semester.
+## This Workshop
 
 ### [Ingest and Analyse real-time data with Event Hubs and Stream Analytics](./Lab/Lab5/Lab5.md)
 In this lab you will use an Azure Logic App to simmulate a NYSE stream of stock purchase transactions. The logic app will then send the messages to Event Hubs. You will then use Stream Analytics to receive and process the stream and perform aggregations to calculate the number of transactions and amound traded in the last 10 seconds. Stream Analytics will send the results to a real-time dataset in Power BI.
