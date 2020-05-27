@@ -8,26 +8,13 @@ The following Azure services will be deployed in your subscription:
 
 Name                        | Type | Pricing Tier | Pricing Info |
 ----------------------------|------|--------------|--------------|
-adpcosmosdb-*suffix*        | Azure Cosmos DB account | 400 RU/sec | https://azure.microsoft.com/en-us/pricing/details/cosmos-db/
-ADPDatabricks-*suffix*      | Azure Databricks Service | Standard | https://azure.microsoft.com/en-us/pricing/details/databricks/
-ADPComputerVision	        | Cognitive Services | S1 | https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/
-SynapseDataFactory-*suffix*	    | Data factory (V2) | Data pipelines | https://azure.microsoft.com/en-us/pricing/details/data-factory/
 ADPEventHubs-*suffix*       | Event Hubs Namespace | Standard | https://azure.microsoft.com/en-us/pricing/details/event-hubs/
 ADPLogicApp	                | Logic app | | https://azure.microsoft.com/en-au/pricing/details/logic-apps/
-SynapseDW                   | Azure Synapse Analytics | DW200c | https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/gen2/
 NYCDataSets                   | SQL database | Standard S1 | https://azure.microsoft.com/en-au/pricing/details/sql-database/single/
 synapsesql-*suffix*| SQL server || 
 operationalsql-*suffix*| SQL server || 
 synapsedatalake*suffix*	        | Azure Data Lake Storage Gen2 || https://azure.microsoft.com/en-us/pricing/details/storage/data-lake/
 SynapseStreamAnalytics-*suffix*	| Stream Analytics job | 3 SU | https://azure.microsoft.com/en-us/pricing/details/stream-analytics/
-ADPDesktop	                | Virtual machine | A4 v2 | https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/
-ADPDesktop_OsDisk	        | Disk | E10 | https://azure.microsoft.com/en-us/pricing/details/managed-disks/
-ADPDesktop-nic	            | Network interface ||
-ADPDesktop-publicip	        | Public IP address || https://azure.microsoft.com/en-us/pricing/details/ip-addresses/
-ADPVirtualNetwork	        | Virtual network || https://azure.microsoft.com/en-us/pricing/details/virtual-network/
-ADPIntegrationAccount       | Integration Account | Basic | https://azure.microsoft.com/en-au/pricing/details/logic-apps/
-ADPBastionHost              | Bastion | | https://azure.microsoft.com/en-au/pricing/details/azure-bastion/
-
 
  <br>**IMPORTANT**: When you deploy the lab resources in your own subscription you are responsible for the charges related to the use of the services provisioned. If you don't want any extra charges associated with the lab resources you should delete the lab resource group and all resources in it.
 
