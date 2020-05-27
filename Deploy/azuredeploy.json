@@ -44,7 +44,6 @@
         "ADPEventHubsSKU": "Standard",
         "ADPEventHubsThroughputUnits": 1,
 
-        /* LAB5 */
         "ADPStreamAnalyticsName": "[concat('SynapseStreamAnalytics-',substring(variables('UniqueSuffix'),0,5))]",
         "ADPStreamAnalyticsSKU": "Standard",
 
@@ -55,17 +54,14 @@
 		
 		"ADPBastionName": "ADPBastionHost",
 		"ADPBastionPublicIPName": "[concat(variables('ADPBastionName'),'-publicip')]",
-		
-        /* LAB5 */
+
 		"ADPIntegrationAccountName": "ADPIntegrationAccount",
-		/* LAB5 */
 		"ADPEventHubConnectionName": "EventHubAPIConnection",
 		"ADPEventHubAuthPolicyID": "[resourceId('Microsoft.Eventhub/namespaces/authorizationRules', variables('ADPEventHubsName'), 'RootManageSharedAccessKey')]",
 		"ADPEventHubsAPIVersion": "[providers('Microsoft.Eventhub','namespaces').apiVersions[0]]"
     },
     "resources": [
         {
-            /* LAB5 */
             "type": "Microsoft.Storage/storageAccounts",
             "sku": {
                 "name": "Standard_RAGRS",
@@ -215,7 +211,6 @@
 			]
         },
         {
-            /* LAB5 */
             "type": "Microsoft.EventHub/namespaces",
             "sku": {
                 "name": "[variables('ADPEventHubsSKU')]",
@@ -266,7 +261,6 @@
 			]
         },
         {
-            /* LAB5 */
             "type": "Microsoft.StreamAnalytics/streamingjobs",
             "name": "[variables('ADPStreamAnalyticsName')]",
             "apiVersion": "2017-04-01-preview",
@@ -295,7 +289,6 @@
             "dependsOn": []
         },
 		{
-            /* LAB5 */
             "type": "Microsoft.Logic/integrationAccounts",
             "apiVersion": "2016-06-01",
             "name": "[variables('ADPIntegrationAccountName')]",
@@ -308,7 +301,6 @@
             }
         },
 		{
-            /* LAB5 */
 			"type": "Microsoft.Logic/workflows",
 			"apiVersion": "2017-07-01",
 			"name": "[variables('ADPLogicAppName')]",
@@ -493,7 +485,6 @@
 			]
 		},
 		{
-            /* LAB5 */
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
             "name": "[variables('ADPEventHubConnectionName')]",
