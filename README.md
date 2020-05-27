@@ -52,6 +52,8 @@ In this section you will provision all Azure resources required to complete the 
 [Please click here to deploy the resources needed for the workshop](./Deploy/Deploy.md).
 
 [Once you have completed the deployment, please continue with the workshop here](./Lab/Lab5/Lab5.md).
+
+**************************************************************************************************************************************
   
 ## Overall View of the a Modern Data Platform Reference Architecture
 
