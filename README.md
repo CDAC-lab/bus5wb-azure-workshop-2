@@ -53,7 +53,7 @@ In this section you will provision all Azure resources required to complete the 
 
 [Once you have completed the deployment, please continue with the workshop here](./Lab/Lab5/Lab5.md).
 
-# PLEASE DELETE ALL RESOURCES YOU USED IN THE WORKSHOP FROM YOUR AZURE PORTAL TO PREVENT CONTINUED USAGE OF YOUR CREDITS.
+## IMPORTANT: ONCE YOU ARE COMPLETE, PLEASE DELETE ALL RESOURCES YOU USED IN THE WORKSHOP FROM YOUR AZURE PORTAL TO PREVENT CONTINUED USAGE OF YOUR CREDITS.
 
 **************************************************************************************************************************************
   
