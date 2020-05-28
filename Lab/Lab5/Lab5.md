@@ -5,6 +5,8 @@ In this lab you will use an Azure Logic App to simmulate high-frequency stock ma
 
 The estimated time to complete this lab is: **60 minutes**.
 
+## ONCE YOU ARE COMPLETE, PLEASE DELETE ALL RESOURCES YOU USED IN THE WORKSHOP FROM YOUR AZURE PORTAL TO PREVENT CONTINUED USAGE OF YOUR CREDITS.
+
 ## Microsoft Learn & Technical Documentation
 
 The following Azure services will be used in this lab. If you need further training resources or access to technical documentation please find in the table below links to Microsoft Learn and to each service's Technical Documentation.
@@ -376,3 +378,4 @@ In this section you will log on to the Power BI portal to create a dashboard to 
 
     ![](./Media/Image66.png)
 
+# ONCE YOU ARE COMPLETE, PLEASE DELETE ALL RESOURCES YOU USED IN THE WORKSHOP FROM YOUR AZURE PORTAL TO PREVENT CONTINUED USAGE OF YOUR CREDITS.
