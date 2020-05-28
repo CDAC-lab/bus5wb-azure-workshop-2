@@ -168,7 +168,7 @@ In this section you will configure your Stream Analytics job to join hot and col
 
 4.	Leave remaining fields with their default values.
 
-    ![](./Media/Image30.png)
+    ![](./Media/Image67.png)
 
 5. Now click **+ Add reference input** button and select **SQL Database** to create a new reference data input stream.
 
