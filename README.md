@@ -11,8 +11,6 @@ This tutorial will give you a hands on introduction to Microsoft Azure from the 
 ## Document Structure
 This document contains detailed step-by-step instructions on how to implement Real Time Analytics in a Modern Data Platform architecture using Azure Data Services. It’s recommended you carefully read the detailed description contained in this document for a successful experience with all Azure services. 
 
-You will see the label **IMPORTANT** whenever a there is a critical step to the lab. Please pay close attention to the instructions given.
-
 ## This Workshop
 
 ### [Ingest and Analyse real-time data with Event Hubs and Stream Analytics](./Lab/Lab5/Lab5.md)
