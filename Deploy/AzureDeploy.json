@@ -24,7 +24,7 @@
         }
     },
     "variables": {
-
+        "UniqueSuffix":"[uniqueString(resourceGroup().id)]",
         "connections_eventhubs_name":  "eventhubs",
         "workflows_CryptoLogicApp_name": "CryptoLogicApp",
         "namespaces_cryptoEventHubs_1_name":"[concat('cryptoEventHubs-', substring(variables('UniqueSuffix'),0,5))]",
