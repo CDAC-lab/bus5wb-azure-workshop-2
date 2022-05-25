@@ -270,7 +270,7 @@
                             "eventhubs": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', variables('connections_eventhubs_name'))]",
                                 "connectionName": "eventhubs",
-                                "id": "/subscriptions/5054f72b-16ed-4894-8bf5-fe7ad8fa20e3/providers/Microsoft.Web/locations/centralus/managedApis/eventhubs"
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/providers/Microsoft.Web/locations/',resourceGroup().location,'/managedApis/eventhubs')]"
                             }
                         }
                     }
