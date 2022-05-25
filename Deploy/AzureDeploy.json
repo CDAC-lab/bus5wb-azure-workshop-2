@@ -1,17 +1,16 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-    },
+    "parameters": {},
     "variables": {
-        "UniqueSuffix":"[uniqueString(resourceGroup().id)]",
-        "connections_eventhubs_name":  "eventhubs",
+        "UniqueSuffix": "[uniqueString(resourceGroup().id)]",
+        "connections_eventhubs_name": "eventhubs",
         "workflows_CryptoLogicApp_name": "CryptoLogicApp",
-        "namespaces_cryptoEventHubs_1_name":"[concat('cryptoEventHubs-', substring(variables('UniqueSuffix'),0,5))]",
-        "storageAccounts_cryptodatalake_name": "[concat('cryptodatalake-', substring(variables('UniqueSuffix'),0,5))]",
-        "streamingjobs_CryptoStreamAnalytics_name":"[concat('CryptoStreamAnalytics-',substring(variables('UniqueSuffix'),0,5))]",
-	"ADPEventHubAuthPolicyID": "[resourceId('Microsoft.Eventhub/namespaces/authorizationRules', variables('ADPEventHubsName'), 'RootManageSharedAccessKey')]",
-	"ADPEventHubsAPIVersion": "[providers('Microsoft.Eventhub','namespaces').apiVersions[0]]"
+        "namespaces_cryptoEventHubs_1_name": "[concat('cryptoEventHubs-', substring(variables('UniqueSuffix'),0,5))]",
+        "storageAccounts_cryptodatalake_name": "[concat('cryptodatalake', substring(variables('UniqueSuffix'),0,3))]",
+        "streamingjobs_CryptoStreamAnalytics_name": "[concat('CryptoStreamAnalytics-',substring(variables('UniqueSuffix'),0,5))]",
+        "ADPEventHubAuthPolicyID": "[resourceId('Microsoft.Eventhub/namespaces/authorizationRules', variables('namespaces_cryptoEventHubs_1_name'), 'RootManageSharedAccessKey')]",
+        "ADPEventHubsAPIVersion": "[providers('Microsoft.Eventhub','namespaces').apiVersions[0]]"
     },
     "resources": [
         {
@@ -115,9 +114,9 @@
                 "api": {
                     "id": "[concat('/subscriptions/', subscription().subscriptionId ,'/providers/Microsoft.Web/locations/',resourceGroup().location,'/managedApis/eventhubs')]"
                 },
-				"parameterValues":{
-					"connectionString": "[listkeys(variables('ADPEventHubAuthPolicyID'), '2017-04-01').primaryConnectionString]"
-				},
+                "parameterValues": {
+                    "connectionString": "[listkeys(variables('ADPEventHubAuthPolicyID'), '2017-04-01').primaryConnectionString]"
+                },
                 "testLinks": []
             }
         },
