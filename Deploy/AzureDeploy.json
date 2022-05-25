@@ -2,26 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "connections_eventhubs_name": {
-            "defaultValue": "eventhubs",
-            "type": "String"
-        },
-        "workflows_CryptoLogicApp_name": {
-            "defaultValue": "CryptoLogicApp",
-            "type": "String"
-        },
-        "namespaces_cryptoEventHubs_1_name": {
-            "defaultValue": "cryptoEventHubs-1",
-            "type": "String"
-        },
-        "storageAccounts_cryptodatalake_name": {
-            "defaultValue": "cryptodatalake",
-            "type": "String"
-        },
-        "streamingjobs_CryptoStreamAnalytics_name": {
-            "defaultValue": "CryptoStreamAnalytics",
-            "type": "String"
-        }
     },
     "variables": {
         "UniqueSuffix":"[uniqueString(resourceGroup().id)]",
