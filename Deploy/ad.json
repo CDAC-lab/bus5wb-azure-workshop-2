@@ -118,7 +118,7 @@
                 {
                     "type": "Microsoft.EventHub/namespaces/eventhubs",
                     "apiVersion": "2017-04-01",
-                    "name": "[concat(variables('ADPEventHubsName'), '/nysestocktrade')]",
+                    "name": "[concat(variables('ADPEventHubsName'), '/cryptotrade')]",
                     "location": "Australia East",
                     "dependsOn": [
                         "[resourceId('Microsoft.EventHub/namespaces', variables('ADPEventHubsName'))]"
@@ -169,133 +169,6 @@
             },
             "properties": {
                 "state": "Enabled"
-            }
-        },
-        {
-            "type": "Microsoft.Logic/workflows",
-            "apiVersion": "2017-07-01",
-            "name": "[variables('ADPLogicAppName')]",
-            "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Logic/integrationAccounts', variables('ADPIntegrationAccountName'))]",
-                "[resourceId('Microsoft.Web/connections', variables('ADPEventHubConnectionName'))]"
-            ],
-            "properties": {
-                "state": "Enabled",
-                "definition": {
-                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-                    "contentVersion": "1.0.0.0",
-                    "parameters": {
-                        "$connections": {
-                            "defaultValue": {},
-                            "type": "Object"
-                        }
-                    },
-                    "triggers": {
-                        "HTTP": {
-                            "recurrence": {
-                                "frequency": "Second",
-                                "interval": 2
-                            },
-                            "evaluatedRecurrence": {
-                                "frequency": "Second",
-                                "interval": 2
-                            },
-                            "type": "Http",
-                            "inputs": {
-                                "headers": {
-                                    "limit": "1000",
-                                    "symbol": "BTCUSDT"
-                                },
-                                "method": "GET",
-                                "uri": "https://api.binance.com/api/v3/trades"
-                            }
-                        }
-                    },
-                    "actions": {
-                        "Parse_JSON": {
-                            "runAfter": {},
-                            "type": "ParseJson",
-                            "inputs": {
-                                "content": "@triggerBody()",
-                                "schema": {
-                                    "items": {
-                                        "properties": {
-                                            "id": {
-                                                "type": "integer"
-                                            },
-                                            "isBestMatch": {
-                                                "type": "boolean"
-                                            },
-                                            "isBuyerMaker": {
-                                                "type": "boolean"
-                                            },
-                                            "price": {
-                                                "type": "string"
-                                            },
-                                            "qty": {
-                                                "type": "string"
-                                            },
-                                            "quoteQty": {
-                                                "type": "string"
-                                            },
-                                            "symbol": {
-                                                "default": "BTC/USDT",
-                                                "type": "string"
-                                            },
-                                            "time": {
-                                                "type": "integer"
-                                            }
-                                        },
-                                        "required": [
-                                            "id",
-                                            "price",
-                                            "qty",
-                                            "quoteQty",
-                                            "time",
-                                            "isBuyerMaker",
-                                            "isBestMatch"
-                                        ],
-                                        "type": "object"
-                                    },
-                                    "type": "array"
-                                }
-                            }
-                        },
-                        "Send_event": {
-                            "runAfter": {
-                                "Parse_JSON": [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type": "ApiConnection",
-                            "inputs": {
-                                "body": {
-                                    "ContentData": "@{base64(body('Parse_JSON'))}"
-                                },
-                                "host": {
-                                    "connection": {
-                                        "name": "@variables('$connections')['eventhubs']['connectionId']"
-                                    }
-                                },
-                                "method": "post",
-                                "path": "/@{encodeURIComponent('cryptotrade')}/events"
-                            }
-                        }
-                    },
-                    "outputs": {}
-                },
-                "parameters": {
-                    "$connections": {
-                        "value": {
-                            "eventhubs": {
-                                "connectionId": "[resourceId('Microsoft.Web/connections',variables('ADPEventHubConnectionName'))]",
-                                "connectionName": "[variables('ADPEventHubConnectionName')]",
-                                "id": "[concat(subscription().id, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/eventhubs')]"
-                            }
-                        }
-                    }
-                }
             }
         },
         {
