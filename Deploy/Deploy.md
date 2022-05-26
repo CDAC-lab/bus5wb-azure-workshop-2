@@ -65,7 +65,7 @@ In this section you will use automated deployment and ARM templates to automate 
 
 1. You can deploy all Azure services required in each lab by clicking the **Deploy to Azure** button below. 
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCDAC-lab%2FBUS5WB-Azure-Workshop-2%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank">
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCDAC-lab%2FBUS5WB-Azure-Workshop-2%2Fmaster%2FDeploy%2Fad.json" target="_blank">
     <img src="https://github.com/CDAC-lab/BUS5WB-Azure-Workshop-2/blob/master/Deploy/Media/deploytoazure.png"/>    
 </a>
 
