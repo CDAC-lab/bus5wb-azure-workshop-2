@@ -5,7 +5,7 @@ In this lab you will use an Azure Logic App to retrieve high-frequency stock mar
 
 The estimated time to complete this lab is: **60 minutes**.
 
-## ONCE YOU ARE COMPLETE, PLEASE DELETE ALL RESOURCES YOU USED IN THE WORKSHOP FROM YOUR AZURE PORTAL TO PREVENT CONTINUED USAGE OF YOUR CREDITS.
+## ONCE YOU HAVE COMPLETED, PLEASE DELETE ALL RESOURCES YOU USED IN THE WORKSHOP FROM YOUR AZURE PORTAL TO PREVENT CONTINUED USAGE OF YOUR CREDITS.
 
 ## Microsoft Learn & Technical Documentation
 
