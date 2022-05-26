@@ -38,7 +38,7 @@ ADPEventHubs-*suffix*	     |Event Hubs Namespace
 SynapseStreamAnalytics-*suffix*	 |Stream Analytics job
 
 # Create CryptoTrades Container in Azure Data Lake Gen2
-In this section you will create the CryptoTrades container in your SynapseDataLake that will be used as a repository for the Crypto stock transactions. You will use the EventHubs Capture feature to save the incoming stream of transactions in your data lake.
+In this section you will create the CryptoTrades container in your SynapseDataLake that will be used as a repository for the Crypto stock transactions. You will use the EventHubs Capture feature to save the incoming stream of transactions in your data lake. We will use an [API from Binance](https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#recent-trades-list).
 
 **IMPORTANT**|
 -------------|
@@ -63,6 +63,10 @@ In this section you will create the CryptoTrades container in your SynapseDataLa
 In this section you will review the implementation of the LogicApp used to retrieve high-frequency stock purchase transactions. These transactions will be formatted as JSON messages and sent to Event Hubs for processing.
 
 1. Add HTTP Trigger and configure as following
+    <br>- **Method**: GET
+    <br>- **URI**: https://api.binance.com/api/v3/trades
+    <br>- **Queries**: symbol = BTCUSDT & limit = 1000
+    <br>- **Run Every**: 2 seconds
 
 ![](./Media/http.png)
 
